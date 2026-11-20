@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dmvsauruu8gwi"]
+
+[ext_resource type="Script" uid="uid://d36uj8mprmbk3" path="res://Scripts/player.gd" id="1_0sd17"]
+[ext_resource type="Texture2D" uid="uid://buycmudj3018y" path="res://Assets/Sprite-0001.png" id="2_0sd17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(61, 65)
+
+[node name="Player" type="CharacterBody2D" unique_id=1320391274 groups=["player"]]
+collision_mask = 7
+script = ExtResource("1_0sd17")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=790808062]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0sd17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1213179218]
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2126314973]
+editor_draw_limits = true

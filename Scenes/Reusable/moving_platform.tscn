@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ifsoobi4d6lq"]
+
+[ext_resource type="Script" uid="uid://y2id17ibd8ll" path="res://Scripts/moving_platform.gd" id="1_qo2gn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mprnj"]
+size = Vector2(337, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhbfv"]
+size = Vector2(336, 20)
+
+[node name="MovingPlatform" type="AnimatableBody2D" unique_id=2117594860]
+script = ExtResource("1_qo2gn")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1372410435]
+position = Vector2(35, 4)
+scale = Vector2(0.35338345, 0.1773795)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-575, -97, 378, -97, 378, 55.216, -575, 55)
+uv = PackedVector2Array(-154.667, -37.333332, -63.33368, -42.666664, -70.66699, 14.666672, -140.00034, 16.666672)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2014946228]
+shape = SubResource("RectangleShape2D_mprnj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1463901164]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1406157498]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_yhbfv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

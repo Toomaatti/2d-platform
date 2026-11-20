@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dyhoemv4xlavn"]
+
+[ext_resource type="Script" uid="uid://416qbvqmi1lc" path="res://dissapearing_platform.gd" id="1_mb3rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mprnj"]
+size = Vector2(311, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhbfv"]
+size = Vector2(311, 77.5)
+
+[node name="DissapearingPlatform" type="StaticBody2D" unique_id=727883931]
+collision_layer = 4
+script = ExtResource("1_mb3rb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=83653499]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_mprnj")
+
+[node name="Trigger" type="Area2D" parent="." unique_id=2131498016]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=189414902]
+position = Vector2(0, -0.75)
+shape = SubResource("RectangleShape2D_yhbfv")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1393667778]
+position = Vector2(169, 31)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-327, -68, -13, -68, -13, 7.8, -327, 7.8)
+uv = PackedVector2Array(-98.000336, -63.333332, -50.666992, -63.333332, -51.33368, -32, -96.66699, -32)

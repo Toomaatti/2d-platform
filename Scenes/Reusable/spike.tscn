@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cyx7pcjxm4grk"]
+
+[ext_resource type="Texture2D" uid="uid://xlurliminc7t" path="res://Assets/spike_18x18.png" id="1_r7b0o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yf5fn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkuro"]
+texture = ExtResource("1_r7b0o")
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.1912308, -6.1795216, 2.0846596, -5.9561653, 1.9357567, -1.8613014, 2.7547264, -1.786849, 2.7547264, 0.67006874, 5.732811, 1.1912336, 5.8072624, 4.839386, 7.4452095, 5.211645, 7.5941124, 7.668564, -6.775139, 7.7430153, -7.4452057, 4.616029, -5.8072586, 4.616029, -5.8072586, 1.3401375, -2.9036293, 1.0423298, -3.6481514, -2.0846577, -0.7445183, -1.786849)
+
+[sub_resource type="TileSet" id="TileSet_g4v7s"]
+tile_size = Vector2i(18, 18)
+physics_layer_0/collision_layer = 4
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_yf5fn")
+sources/3 = SubResource("TileSetAtlasSource_xkuro")
+
+[node name="Spike" type="TileMapLayer" unique_id=1010024991 groups=["spikes"]]
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_g4v7s")
